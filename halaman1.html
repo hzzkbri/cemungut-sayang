@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ayaang Capek Gaa 🥺</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+    * {
+        margin: 0; padding: 0; box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    body {
+        background: linear-gradient(135deg, #ffb6d9, #ffd5ec);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 34px;
+        margin-bottom: 30px;
+        text-shadow: 0 0 8px rgba(0,0,0,0.2);
+        color: #fff;
+    }
+    .emoji {
+        font-size: 90px;
+        margin-bottom: 10px;
+        transition: all 0.2s ease;
+    }
+    .caption {
+        font-size: 22px;
+        margin-bottom: 20px;
+        min-height: 40px;
+        font-weight: 500;
+        color: #fff;
+    }
+    .slider {
+        width: 80%;
+        margin-bottom: 30px;
+        appearance: none;
+        height: 8px;
+        border-radius: 8px;
+        background: #ff69b4;
+        outline: none;
+        transition: background 0.3s;
+    }
+    .slider::-webkit-slider-thumb {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background: #fff;
+        border: 3px solid #ff69b4;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .longtext-container {
+        display: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        background: rgba(255,255,255,0.95);
+        color: #333;
+        max-width: 800px;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        gap: 20px;
+    }
+    .longtext-container img {
+        max-width: 200px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .longtext {
+        text-align: left;
+        line-height: 1.6;
+        flex: 1;
+        white-space: pre-wrap;
+    }
+    .btn {
+        padding: 15px 35px;
+        font-size: 20px;
+        background: #ff69b4;
+        color: #fff;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        display: none;
+        margin-top: 20px;
+        transition: all 0.3s ease;
+    }
+    .btn:hover {
+        background: #ff4da6;
+    }
+</style>
+</head>
+<body>
+
+<h1>Ayaaaangkuu capee gaa 🥺</h1>
+
+<div class="emoji" id="emoji">😌</div>
+<div class="caption" id="caption">aku gapapa kok sayang</div>
+
+<input type="range" min="0" max="100" value="0" class="slider" id="slider">
+
+<div class="longtext-container" id="longtext-container">
+    <img src="assets/peluk.png" alt="peluk sayang">
+    <div class="longtext" id="longtext">
+haii cinta aku yang paling aku sayang 🥹🤍  
+aku tau kamu lagi butuh refreshing, lagi healing, dan aku seneng banget kamu bisa jalan-jalan ke curug bareng temen-temen kamu 😚  
+pokoknya jangan kepikiran aku yang di sini yaa, aku malah makin happy kalo kamu bisa ketawa lepas, bisa happy tanpa mikirin hal berat 😘  
+have fun yaa ayangg, nikmatin tiap detik liburannya, hirup udara segerr, liat pemandangan cakep, biar hati kamu juga ikutan fresh 💖  
+aku selalu doain kamu biar sehat, biar happy, biar dikelilingi orang-orang baik. dan aku di sini nungguin kamu pulang cerita-cerita seru ke aku 🤗  
+inget yaa, kamu pantas buat seneng, kamu layak buat bahagia, dan kamu berhak istirahat tanpa rasa bersalah 🥺 aku tuh sayang banget sama kamu, selalu support kamu!  
+jadi have fun yaa cinta aku, jangan lupa senyum, foto-foto lucu, dan tetep jaga diri. aku bangga banget sama kamu 🤍❤️
+    </div>
+</div>
+
+<button class="btn" id="nextBtn" onclick="window.location.href='halaman2.html'">Lanjuut</button>
+
+<script>
+const emoji = document.getElementById('emoji');
+const caption = document.getElementById('caption');
+const slider = document.getElementById('slider');
+const longtextContainer = document.getElementById('longtext-container');
+const nextBtn = document.getElementById('nextBtn');
+
+slider.addEventListener('input', function() {
+    const val = parseInt(this.value);
+    
+    if(val < 20){
+        emoji.innerText = '😌';
+        caption.innerText = 'aku gapapa kok sayang';
+        longtextContainer.style.display = 'none';
+        nextBtn.style.display = 'none';
+    } else if(val < 40){
+        emoji.innerText = '🥺';
+        caption.innerText = 'aku capeee dikit sih 🥺';
+        longtextContainer.style.display = 'none';
+        nextBtn.style.display = 'none';
+    } else if(val < 60){
+        emoji.innerText = '😵‍💫';
+        caption.innerText = 'sayang capeek banget 🥵';
+        longtextContainer.style.display = 'none';
+        nextBtn.style.display = 'none';
+    } else if(val < 80){
+        emoji.innerText = '🥹';
+        caption.innerText = 'akuuu lelahh banget cintaaa 🥹';
+        longtextContainer.style.display = 'none';
+        nextBtn.style.display = 'none';
+    } else {
+        emoji.innerText = '😭';
+        caption.innerText = 'akuu capeekkk bangettt pengen dipeluk 😭';
+        longtextContainer.style.display = 'flex';
+        nextBtn.style.display = 'inline-block';
+    }
+});
+</script>
+
+</body>
+</html>

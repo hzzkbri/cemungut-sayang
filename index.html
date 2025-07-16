@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loading Sayang 🤍</title>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+  }
+  body {
+    background: linear-gradient(135deg, #ffc1e3, #ffe9f4, #fddde6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    overflow: hidden;
+  }
+  .love {
+    font-size: 120px;
+    animation: pulse 1.2s infinite;
+    color: white;
+    text-shadow: 0 0 20px rgba(255,255,255,0.6);
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+  }
+  h1 {
+    font-size: 32px;
+    color: #fff;
+    margin-top: 20px;
+    text-shadow: 0 0 8px rgba(0,0,0,0.2);
+  }
+  p {
+    font-size: 20px;
+    color: #fff;
+    margin-top: 10px;
+    opacity: 0.9;
+    text-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+</style>
+</head>
+<body>
+
+<div class="love">🤍</div>
+<h1>Loading...</h1>
+<p>sabar ya cintaku 🥰</p>
+
+<script>
+// Redirect ke halaman1.html otomatis
+setTimeout(() => {
+  window.location.href = "halaman1.html";
+}, 10000);
+</script>
+
+</body>
+</html>

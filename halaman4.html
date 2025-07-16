@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Semangat Sayang 🫶</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+  body {
+    background: linear-gradient(135deg, #ffd1e8, #ffeaf7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+  }
+  h1 {
+    font-size: 42px;
+    color: #ff66a6;
+    margin-bottom: 20px;
+    transition: all 0.5s ease;
+  }
+  .stiker {
+    width: 250px;
+    margin: 30px 0;
+    filter: drop-shadow(0 8px 12px rgba(0,0,0,0.2));
+  }
+  .typing {
+    font-size: 26px;
+    color: #333;
+    font-weight: 600;
+    margin-top: 20px;
+    display: inline-block;
+  }
+  .cursor {
+    display: inline-block;
+    width: 3px;
+    height: 30px;
+    background: #ff66a6;
+    margin-left: 5px;
+    animation: blink 0.8s infinite;
+    vertical-align: bottom;
+  }
+  @keyframes blink {
+    0%, 100% {opacity: 1;}
+    50% {opacity: 0;}
+  }
+</style>
+</head>
+<body>
+
+<h1 id="main-text">YEAAAAAAAAY MACCCI SAYAANG 💖</h1>
+
+<img src="assets/stiker.png" alt="stiker lucu" class="stiker">
+
+<div class="typing" id="typing-text">i love yo<span id="u-part"></span></div><div class="cursor"></div>
+
+<script>
+setTimeout(() => {
+  document.getElementById("main-text").innerText = "OKAAY SAYAANG CEMUNGUUT YAAA HAVEE FUNN 🥳";
+}, 3000);
+
+// infinite u nambah terus tanpa reset
+let uCounter = 0;
+const uPart = document.getElementById("u-part");
+
+setInterval(() => {
+  uCounter++;
+  uPart.textContent += 'u';
+  // biar halaman auto turun ke bawah kalo penuh
+  window.scrollTo(0, document.body.scrollHeight);
+}, 100);
+</script>
+
+</body>
+</html>

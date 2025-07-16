@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reminder Ayangku 💖</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+  body {
+    background: linear-gradient(135deg, #ffcce7, #ffe5f0);
+    text-align: center;
+    padding: 20px;
+  }
+  h1 {font-size: 34px; color: #ff69b4; margin-bottom: 20px;}
+  .jam {
+    font-size: 48px;
+    margin: 10px 0 30px;
+    color: #444;
+  }
+  table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  th, td {
+    padding: 15px;
+    font-size: 18px;
+  }
+  th {background: #ffaad4; color: white;}
+  tr:nth-child(even) {background: #fff;}
+  tr:nth-child(odd) {background: #ffeaf4;}
+  .ilustrasi-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 30px 0;
+  }
+  .ilustrasi {
+    background: #fff;
+    width: 150px;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    font-size: 18px;
+    color: #ff69b4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ilustrasi .emoji {font-size: 50px; margin-bottom: 10px;}
+  .longtext {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 20px;
+    margin: 30px auto;
+    font-size: 20px;
+    color: #ff478c;
+    max-width: 700px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    line-height: 1.7;
+  }
+  .btn-lanjut {
+    background: #ff69b4;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 22px;
+    border-radius: 50px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .btn-lanjut:hover {background: #ff85c1;}
+</style>
+</head>
+<body>
+
+<h1>oh yaaa sayang inget yaaa 🥹💖</h1>
+
+<div class="jam" id="jam">00:00:00</div>
+
+<h2>jadwal sholat hari ini 🌸</h2>
+
+<table>
+  <tr>
+    <th>Sholat</th>
+    <th>Jam</th>
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td>Dzuhur</td>
+    <td id="dzuhur-jam">11:57</td>
+    <td id="dzuhur-status">-</td>
+  </tr>
+  <tr>
+    <td>Ashar</td>
+    <td id="ashar-jam">15:19</td>
+    <td id="ashar-status">-</td>
+  </tr>
+</table>
+
+<div class="ilustrasi-box">
+  <div class="ilustrasi">
+    <div class="emoji">🕌</div>
+    jangan lupa sholat
+  </div>
+  <div class="ilustrasi">
+    <div class="emoji">🍽️</div>
+    jangan lupa mam
+  </div>
+  <div class="ilustrasi">
+    <div class="emoji">💧</div>
+    jangan lupa minum
+  </div>
+</div>
+
+<div class="longtext">
+sayangku aku tau kamu capek, tapi aku mau kamu tetep inget buat jaga badan kamu yaa 🤍  
+jangan lupa sholat biar hati adem, makan biar energi kamu ga abis, minum banyak biar tubuh kamu tetep sehat 💖  
+aku mungkin ga disamping kamu, tapi aku selalu mikirin kamu, aku pengen kamu senyum terus! kamu hebat banget loh, jangan pernah ngerasa sendirian yaa! aku selalu ada buat kamu ❤️
+</div>
+
+<button class="btn-lanjut" onclick="location.href='halaman3.html'">Oke sayangkuu 💖</button>
+
+<script>
+function updateJam() {
+    const now = new Date();
+    const jam = String(now.getHours()).padStart(2, '0');
+    const menit = String(now.getMinutes()).padStart(2, '0');
+    const detik = String(now.getSeconds()).padStart(2, '0');
+    document.getElementById('jam').textContent = `${jam}:${menit}:${detik}`;
+
+    updateStatus('dzuhur', 11, 57);
+    updateStatus('ashar', 15, 19);
+}
+
+function updateStatus(sholat, targetHour, targetMinute) {
+    const now = new Date();
+    const nowMinutes = now.getHours() * 60 + now.getMinutes();
+    const targetMinutes = targetHour * 60 + targetMinute;
+    const selisih = targetMinutes - nowMinutes;
+
+    let status = '';
+    if (selisih > 0) {
+        status = `${selisih} menit lagi`;
+    } else if (selisih < 0) {
+        status = `${Math.abs(selisih)} menit lalu`;
+    } else {
+        status = 'sekarang 🥰';
+    }
+    document.getElementById(`${sholat}-status`).textContent = status;
+}
+
+setInterval(updateJam, 1000);
+</script>
+
+</body>
+</html>

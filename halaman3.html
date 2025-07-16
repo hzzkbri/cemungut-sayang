@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pap cetamol buat aku 🥺</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body {
+    background: linear-gradient(135deg, #ffd6ec, #ffeaf7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+  }
+  h1 {
+    color: #ff66a6;
+    font-size: 40px;
+    margin-bottom: 25px;
+    padding: 0 15px;
+  }
+  .pap-text {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 25px;
+    max-width: 700px;
+    line-height: 1.6;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  .gambar {
+    width: 280px;
+    margin: 30px 0;
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  }
+  .button-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 320px;
+  }
+  .btn {
+    padding: 18px 25px;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .iya-btn {
+    background: #ff69b4;
+    color: #fff;
+  }
+  .iya-btn:hover {
+    background: #ff85c3;
+  }
+  .gamau-btn {
+    background: #ffd1e8;
+    color: #ff66a6;
+  }
+  .gamau-btn:hover {
+    background: #ffc1df;
+  }
+  .pliss {
+    display: none;
+    margin-top: 30px;
+    font-size: 24px;
+    color: #ff478c;
+    max-width: 600px;
+    line-height: 1.5;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+</style>
+</head>
+<body>
+
+<h1>oh yaa aku malu sebenernya… 😳</h1>
+
+<div class="pap-text">
+aku tuh lagi gak enakan sayang… badan agak lemes, hati juga kangen kamu…<br><br>
+kayaknya aku cuma bisa sembuh kalo dapet pap cetamol dari kamu 🥺<br><br>
+pap cetamolnya tuh kayak vitamin semangat aku biar makin ceria dan senyum-senyum sendiri mikirin kamu terus 😳 boleh banget gak aku minta pap cetamolnya? 🫣💖
+</div>
+
+<img src="assets/papcetamol.png" alt="pap cetamol" class="gambar">
+
+<div class="button-wrap">
+  <button class="btn iya-btn" onclick="location.href='halaman4.html'">IYA SAYANG SIAP NANTI AKU KIRIM YA 💖</button>
+  <button class="btn gamau-btn" id="gamau-btn" onclick="gajadi()">GAMAUU AAH 🤪</button>
+</div>
+
+<div class="pliss" id="pliss-text">
+ih sayang pwwwiiissss 🥺 aku tuh pengen cepet sembuh biar bisa ketemu kamu lagi dan cerita-cerita lucu, makanya pliss yaa kasih aku pap cetamolnyaaa 😳💗
+</div>
+
+<script>
+function gajadi(){
+  document.getElementById("pliss-text").style.display = "block";
+  document.getElementById("gamau-btn").style.display = "none";
+}
+</script>
+
+</body>
+</html>
